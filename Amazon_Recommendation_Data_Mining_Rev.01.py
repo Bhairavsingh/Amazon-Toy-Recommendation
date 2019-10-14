@@ -1,13 +1,13 @@
-#!/usr/bin/env python
+
 # coding: utf-8
 
-# In[ ]:
+# In[27]:
 
 
 pip install selenium
 
 
-# In[7]:
+# In[28]:
 
 
 from bs4 import BeautifulSoup
@@ -17,21 +17,21 @@ import math
 import numpy as np
 
 
-# In[2]:
+# In[29]:
 
 
 #Reading input files
-data = pd.read_csv("amazon_co-ecommerce_sample.csv")
+data = pd.read_csv("amazon_co-ecommerce_sample .csv")
 
 
-# In[8]:
+# In[31]:
 
 
 #Chrome driver for web scraping
-driver = webdriver.Chrome("C:/Users/Bhair/Downloads/chromedriver_win32/chromedriver")
+driver = webdriver.Chrome("C:/Users/meera/Downloads/chromedriver_win32 (1)/chromedriver")
 
 
-# In[3]:
+# In[32]:
 
 
 #Function for detecting nan values from list of strings.
@@ -144,7 +144,7 @@ def screpgetgo(idata):
     return N_product_name, N_Avaerage_rating, N_Price
 
 
-# In[9]:
+# In[33]:
 
 
 #Converting charecters to links.
@@ -153,64 +153,98 @@ strings_links = is_nan_in_string(data["customers_who_bought_this_item_also_bough
 links = get_links(strings_links)
 
 
-# In[10]:
+# In[34]:
 
 
 #Getting information from amazon website.
 
+
+######################################################################################################################
+#Remove comment sign for your code below
+######################################################################################################################
+
 #For Akhil
-also_name, also_avg_rating, also_price = give_list_of_data(links[:2500])
+#also_name, also_avg_rating, also_price = give_list_of_data(links[:2500])
 
 #For Abhishek
-also_name, also_avg_rating, also_price = give_list_of_data(links[2500:5000])
+#also_name, also_avg_rating, also_price = give_list_of_data(links[2500:5000])
 
 #For Bhairav
-also_name, also_avg_rating, also_price = give_list_of_data(links[5000:7500])
+#also_name, also_avg_rating, also_price = give_list_of_data(links[5000:7500])
 
 #For Meera
 also_name, also_avg_rating, also_price = give_list_of_data(links[7500:])
 
 
-# In[11]:
+# In[137]:
 
-
-#Writing data in csv file.
 
 pd_also_name = pd.DataFrame(also_name)
 pd_also_avg_rating = pd.DataFrame(also_avg_rating)
 pd_also_price = pd.DataFrame(also_price)
 
-pd_also_name.to_csv('Amazon_Association_Data_Akhil_0_to_2500_alsoname.csv')
-pd_also_avg_rating.to_csv('Amazon_Association_Data_Akhil_0_to_2500_alsoavgrating.csv')
-pd_also_price.to_csv('Amazon_Association_Data_Akhil_0_to_2500_alsoprice.csv')
+
+######################################################################################################################
+#Remove comment sign for your code below
+######################################################################################################################
+
+
+#pd_also_name.to_csv('Amazon_Association_Data_Akhil_0_to_2500_alsoname.csv')
+#pd_also_avg_rating.to_csv('Amazon_Association_Data_Akhil_0_to_2500_alsoavgrating.csv')
+#pd_also_price.to_csv('Amazon_Association_Data_Akhil_0_to_2500_alsoprice.csv')
 
 ######################################################################################################################
 
-pd_also_name.to_csv('Amazon_Association_Data_Abhishek_2500_to_5000_alsoname.csv')
-pd_also_avg_rating.to_csv('Amazon_Association_Data_Abhishek_2500_to_5000_alsoavgrating.csv')
-pd_also_price.to_csv('Amazon_Association_Data_Abhishek_2500_to_5000_alsoprice.csv')
+#pd_also_name.to_csv('Amazon_Association_Data_Abhishek_2500_to_5000_alsoname.csv')
+#pd_also_avg_rating.to_csv('Amazon_Association_Data_Abhishek_2500_to_5000_alsoavgrating.csv')
+#pd_also_price.to_csv('Amazon_Association_Data_Abhishek_2500_to_5000_alsoprice.csv')
 
 ######################################################################################################################
 
-pd_also_name.to_csv('Amazon_Association_Data_Bhairav_5000_to_7500_alsoname.csv')
-pd_also_avg_rating.to_csv('Amazon_Association_Data_Bhairav_5000_to_7500_alsoavgrating.csv')
-pd_also_price.to_csv('Amazon_Association_Data_Bhairav_5000_to_7500_alsoprice.csv')
+#pd_also_name.to_csv('Amazon_Association_Data_Bhairav_5000_to_7500_alsoname.csv')
+#pd_also_avg_rating.to_csv('Amazon_Association_Data_Bhairav_5000_to_7500_alsoavgrating.csv')
+#pd_also_price.to_csv('Amazon_Association_Data_Bhairav_5000_to_7500_alsoprice.csv')
 
 ######################################################################################################################
+
+
+# In[ ]:
+
 
 pd_also_name.to_csv('Amazon_Association_Data_Meera_7500_to_end_alsoname.csv')
 pd_also_avg_rating.to_csv('Amazon_Association_Data_Meera_7500_to_end_alsoavgrating.csv')
 pd_also_price.to_csv('Amazon_Association_Data_Meera_7500_to_end_alsoprice.csv')
 
 
-# In[ ]:
+# In[142]:
+
+
+flat_price=pd_also_price.copy()
+
+
+# In[145]:
+
+
+type(flat_avg_rating[0][0])
+
+
+# In[143]:
 
 
 
+for i in range(0,6):
+    for j in range(0,len(flat_price[i])):
+        if (str(flat_price[i][j]).find('£')>=0):
+            start=str(flat_price[i][j]).find('£')+1
+            end=len(str(flat_price[i][j]))
+            flat_price[i][j]=str(flat_price[i][j][start:end])
+        else:
+            flat_price[i][j]=''
+flat_price
 
 
-# In[ ]:
+# In[141]:
 
 
-
+flat_price.to_csv('Amazon_Association_Data_Meera_7500_to_end_alsoprice_new.csv')
 
