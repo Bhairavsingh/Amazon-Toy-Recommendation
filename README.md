@@ -11,7 +11,7 @@ Meera Bankar            : Meerabankar@ou.edu
 -Recommend products using clustering over below parameters
 ● Price of the product, Rating of Product, Type of product, Brand of product
 
-4. Significance
+4. Significance:
 4.1 Application:
 Recommender systems are designed with ideas from data mining, machine learning, and user profiling research in order to provide end-users with more proactive and personalized information retrieval applications. Two popular approaches have come to dominate. First, content-based techniques leverage the availability of rich item descriptions to identify new items that are similar to those that a user has liked in the past. In contrast, collaborative
 recommendation tries to find some users who share similar tastes with the given user and recommends articles they like to that user. Recommendation systems are the most important part of an eCommerce business as it decides the growth of business. Examples of such applications include recommending books, CDs, and other products at Amazon.com, movies by MovieLens, Myntra, Flipkart and news at VERSIFI Technologies (formerly AdaptiveInfo.com). Moreover, some of the vendors have incorporated recommendation capabilities into their commerce servers. Today, customers are preferring a more faster way of purchase, from the essential goods to luxury items every user tries to buy from the digital platform. Hence the demand for effective recommendation systems is increasing every day.
