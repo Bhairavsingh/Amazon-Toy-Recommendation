@@ -1,5 +1,8 @@
 Kid’s Entertainment Products Recommendation System Using Association Rule Mining for Amazon Data.
 
+Abstract:
+With the rise in eCommerce and ease of online shopping, we interact and make use of a personalized recommendation system in our day to day lives. It helps in our decision making and propels sales figures for the businesses involved. To take a deep dive into the mechanics of these systems we have developed a project catered towards kids and their parents who are interested in shopping for toys and books. This project was performed on a starter dataset from Kaggle on toy transactions, which was then used to web scrape to develop the dataset of interest. After appropriate preprocessing association rule mining and clustering was performed on this dataset, using 2 algorithms of each type. The results were analyzed and compared to select the best algorithm. These algorithms were then implemented into the user interface to generating collaborative and content-based recommendation systems for toys.
+
 2.Authors:
 Abhishek Gupta          : abhigupta@ou.edu
 Akhil Potdar            : akhilpotdar@ou.edu
