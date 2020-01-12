@@ -1,0 +1,81 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<title>ToyRoom - Arm</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body style = "margin:0;">
+
+<div style = "background-color:linen;">
+    <div position = "fixed" style = "height:50px; background-color:Black">
+        <a href = "{% url 'home' %}" style = "font-family:Times; font-size:25px; color:Snow; margin-left:10px;"> Home </a>
+        <a href = "{% url 'About' %}" style = "font-family:Times; font-size:25px; color:Snow; margin-left:50px;"> About </a>
+        <a href = "{% url 'begin' %}" style = "font-family:Times; font-size:25px; color:Snow; margin-left:50px;"> Begin </a>
+        <a href = "{% url 'arm' %}" style = "font-family:Times; font-size:25px; color:Snow; margin-left:50px;"> Arm </a>
+        <a href = "{% url 'clust' %}" style = "font-family:Times; font-size:25px; color:Snow; margin-left:50px;"> Clusters </a>
+        <a href = "{% url 'Partners' %}" style = "font-family:Times; font-size:25px; color:Snow; margin-left:50px;"> Partners </a>
+    </div>
+
+    <div style = "margin-left:150px; margin-right:150px; margin-top:100px">
+        <h1 style = "font-family:fantasy; font-size:80px; color:yellowgreen", align = "center">ToyRoom</h1>
+    </div>
+
+    <div style = "margin-left:150px; margin-right:150px; margin-top:50px">
+        <h2 style = "font-family:fantasy; font-size:40px; color:Black">Select Your Option!</h2>
+    </div>
+
+    <div style = "margin-left:150px; margin-right:150px; margin-top:100px">
+        <h3 style = "color:Black"> Do you want to check what other kids got when they bought similar toy that you bought? </h3>
+    </div>
+
+    <div align = "center">
+            <form action = "dropdown" method = "POST">
+                {% csrf_token %}
+                <select id = "val" name = val>
+                    <option value = "5001"> Select </option>
+                    <option value = "0">24 Girls Body Art Stencils - 12 Unique Designs In Each Pack - Ideal For Glitter Tattoos Etc</option>
+                    <option value = "1">Dungeons &amp; Dragons Core Rulebook: Dungeon Master's Guide: 1</option>
+                    <option value = "2">Dungeons &amp; Dragons Core Rulebook: Monster Manual</option>
+                    <option value = "4">Dungeons &amp; Dragons Core Rulebook: Player's Handbook: 1</option>
+                    <option value = "5">Dungeons &amp; Dragons Starter Kit: 1</option>
+                    <option value = "6">Girls 10ml Pot Of Glitter Tattoo Glue - Cosmetic Body Art Adhesive</option>
+                    <option value = "7">Hornby R8222 00 Gauge Track Extension Pack B</option>
+                    <option value = "8">Hornby R8223 00 Gauge Track Extension Pack C</option>
+                    <option value = "9">Jake and The Never Land Pirates Deluxe Adventure Figure Pack</option>
+                    <option value = "10">Jake and The Never Land Pirates Hook's Jolly Roger Pirate Ship</option>
+                    <option value = "11">Johnson's Baby Extra Sensitive Baby Wipes, 12 Packs (Total 672 Wipes)</option>
+                    <option value = "12">Magic The Gathering Magic Origins Fat Pack</option>
+                    <option value = "13">Magic The Gathering Origins Deck Builder's Tool Kit</option>
+                    <option value = "14">Melissa &amp; Doug Deluxe Puppet Theatre (Sturdy Non-Tip Base, Plush Curtains, 132.08 cm H × 45.72 cm W × 62.865 cm L)</option>
+                    <option value = "15">Melissa &amp; Doug Pirate Puppet with Detachable Wooden Rod (Puppets and Puppet Theaters, Animated Gestures, Inspires Creativity, 38.1 cm H x 12.7 cm W x 16.51 cm L)</option>
+                    <option value = "16">Motion Sand Beach Bucket Playset</option>
+                    <option value = "17">Motion Sand® 2000g Pack - Natural</option>
+                    <option value = "18">Pack Of 24 Boys Junior Glitter Tattoo Stencils - 12 Unique Designs In Each Pack</option>
+                    <option value = "19">Pack Of 36 Mixed Girls Glitter Tattoo Stencils - 36 Unique Designs In Each Pack</option>
+                    <option value = "20">Pampers Baby-Dry, 144 Nappies, 11-16 kg, Monthly Saving Pack, Air Channels for Breathable Dryness Overnight, Size 5</option>
+                    <option value = "21">Papo 39338 Red King Richard Figure</option>
+                    <option value = "22">Papo 39384 Red Bowman Figure', 'Playmobil 5136 Pirate Gang</option>
+                    <option value = "23">Playmobil 5298 Pirates Ship Skull and Bones Corsair</option>
+                    <option value = "24">Q WORKSHOP Elvish beige &amp; black Dice Bag</option>
+                    <option value = "25">Schleich Dragon Knight with Sword</option>
+                    <option value = "26">Schleich Griffin Knight with Sword</option>
+                </select>
+                <button type = "submit">Select the product name</button>
+            </form>
+        </div>
+
+    <div style = "height:100px; margin-top:200px; background-color:Black">
+        <footer>
+                <p> <br></p>
+                <p style = "margin-left:150px; margin-right:150px; font-size:20px; color:Snow" align = "center"> Powered by Skyliners... </p>
+        </footer>
+    </div>
+</div>
+
+</body>
+</html>
+
+

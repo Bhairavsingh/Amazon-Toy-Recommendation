@@ -1,0 +1,68 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<title>ToyRoom - Begin</title>
+<meta charset="UTF-8">
+<meta name = "viewport" content="width=device-width, initial-scale=1">
+
+<body style = "margin:0;">
+
+<div style = "background-color:linen">
+    <div style = "height:50px; background-color:Black">
+            <a href = "{% url 'home' %}" style = "font-family:Times; font-size:25px; color:Snow; margin-left:10px;"> Home </a>
+            <a href = "{% url 'About' %}" style = "font-family:Times; font-size:25px; color:Snow; margin-left:50px;"> About </a>
+            <a href = "{% url 'begin' %}" style = "font-family:Times; font-size:25px; color:Snow; margin-left:50px;"> Begin </a>
+            <a href = "{% url 'arm' %}" style = "font-family:Times; font-size:25px; color:Snow; margin-left:50px;"> Arm </a>
+            <a href = "{% url 'clust' %}" style = "font-family:Times; font-size:25px; color:Snow; margin-left:50px;"> Clusters </a>
+            <a href = "{% url 'Partners' %}" style = "font-family:Times; font-size:25px; color:Snow; margin-left:50px;"> Partners </a>
+    </div>
+
+    <div style = "margin-left:150px; margin-right:150px; margin-top:100px">
+        <h1 style = "font-family:fantasy; font-size:80px; color:yellowgreen", align = "center">ToyRoom</h1>
+    </div>
+
+    <div style = "margin-left:150px; margin-right:150px; margin-top:50px">
+        <h2 style = "font-family:fantasy; font-size:40px; color:Black">Select Your Option!</h2>
+    </div>
+
+    <div style = "margin-left:150px; margin-right:150px; margin-top:100px">
+        <h3 style = "color:Black"> Do you want to check what other kids got when they bought similar toy that you bought? </h3>
+    </div>
+
+    <div align = "center" style = "margin-top:50px">
+            <form action = "arm">
+                <button type = "submit" name = "Check Out!">
+                        <svg height="40" width="180" viewbox = "0 0 38 59">
+                            <text font-size = "30", x = "-60", y = "40", font-family = "cursive">Check Out!</text>
+                        </svg>
+                </button>
+            </form>
+        </div>
+    
+    <div style = "margin-left:150px; margin-right:150px; margin-top:100px">
+            <h3 style = "color:Black"> Do you want to check what other toys you can buy which are similar to your toy? </h3>
+    </div>
+    
+        <div align = "center" style = "margin-top:50px">
+                <form action = "clust">
+                    <button type = "submit" name = "Check Out!">
+                            <svg height="40" width="180" viewbox = "0 0 38 59">
+                                <text font-size = "30", x = "-60", y = "40", font-family = "cursive">Check Out!</text>
+                            </svg>
+                    </button>
+                </form>
+            </div>
+
+    <div style = "height:100px; margin-top:200px; background-color:Black">
+        <footer>
+                <p> <br></p>
+                <p style = "margin-left:150px; margin-right:150px; font-size:20px; color:Snow" align = "center"> Powered by Skyliners... </p>
+        </footer>
+    </div>
+</div>
+
+</body>
+</html>
+

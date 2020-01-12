@@ -1,0 +1,58 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<title>ToyRoom - clustering Results</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body style = "margin:0;">
+
+<div style="background-color:linen">
+    <div style="height:50px; background-color:Black">
+            <a href = "{% url 'home' %}" style = "font-family:Times; font-size:25px; color:Snow; margin-left:10px;"> Home </a>
+            <a href = "{% url 'About' %}" style = "font-family:Times; font-size:25px; color:Snow; margin-left:50px;"> About </a>
+            <a href = "{% url 'begin' %}" style = "font-family:Times; font-size:25px; color:Snow; margin-left:50px;"> Begin </a>
+            <a href = "{% url 'arm' %}" style = "font-family:Times; font-size:25px; color:Snow; margin-left:50px;"> Arm </a>
+            <a href = "{% url 'clust' %}" style = "font-family:Times; font-size:25px; color:Snow; margin-left:50px;"> Clusters </a>
+            <a href = "{% url 'Partners' %}" style = "font-family:Times; font-size:25px; color:Snow; margin-left:50px;"> Partners </a>
+    </div>
+
+    <div style = "margin-left:150px; margin-right:150px; margin-top:100px">
+        <h1 style = "font-family:fantasy; font-size:80px; color:yellowgreen", align = "center">ToyRoom</h1>
+    </div>
+
+    <div style = "margin-left:150px; margin-right:150px; margin-top:50px">
+        <h2 style = "font-family:fantasy; font-size:40px; color:Black">Results!</h2>
+    </div>
+
+    <div style = "margin-left:150px; margin-right:150px; margin-top:50px">
+    
+        <h3 style = "font-family:fantasy;"> Products <br> </h3>
+    
+        {% for i, j, k in zippedList %}
+        
+        <h4> {{i}} <br> </h4>
+    
+        {% endfor %}
+    
+    </div>
+
+
+    <div style = "height:100px; margin-top:200px; background-color:Black">
+        <footer>
+                <p> <br></p>
+                <p style = "margin-left:150px; margin-right:150px; font-size:20px; color:Snow" align = "center"> Powered by Skyliners... </p>
+        </footer>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
